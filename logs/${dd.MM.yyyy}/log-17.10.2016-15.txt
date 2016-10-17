@@ -1,0 +1,1 @@
+17.10.2016 17:04:22 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Brokers after trading in assets' ascending order:

@@ -1,0 +1,24 @@
+17.10.2016 19:40:09 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Brokers after trading in assets' ascending order:
+17.10.2016 19:40:09 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 1 has 72 stocks of Epam and 14919,18 money, total assets: 20647,39
+17.10.2016 19:40:09 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 4 has 29 stocks of Epam and 18466,91 money, total assets: 20774,10
+17.10.2016 19:40:09 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 5 has 0 stocks and 21085,37 money, total assets: 21085,37
+17.10.2016 19:40:09 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 2 has 37 stocks of Epam and 18401,01 money, total assets: 21344,67
+17.10.2016 19:40:09 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 3 has 70 stocks of Epam and 16113,65 money, total assets: 21682,74
+17.10.2016 19:41:51 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Brokers after trading in assets' ascending order:
+17.10.2016 19:41:51 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 5 has 8 stocks of Apple and 19312,69 money, total assets: 20256,18
+17.10.2016 19:41:51 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 4 has 37 stocks of Facebook and 14974,52 money, total assets: 20347,41
+17.10.2016 19:41:51 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 1 has 57 stocks of BMW and 15800,96 money, total assets: 20397,64
+17.10.2016 19:41:51 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 3 has 99 stocks of McDonalds and 8730,56 money, total assets: 21133,88
+17.10.2016 19:41:51 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 2 has 94 stocks of Facebook and 8424,53 money, total assets: 22074,57
+17.10.2016 19:42:27 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Brokers after trading in assets' ascending order:
+17.10.2016 19:42:27 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 3 has 30 stocks of Apple and 16490,59 money, total assets: 20083,97
+17.10.2016 19:42:27 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 5 has 28 stocks of BMW and 17915,25 money, total assets: 20131,62
+17.10.2016 19:42:27 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 2 has 71 stocks of McDonalds and 11590,85 money, total assets: 20687,27
+17.10.2016 19:42:27 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 1 has 0 stocks and 20730,38 money, total assets: 20730,38
+17.10.2016 19:42:27 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 4 has 50 stocks of McDonalds and 14948,81 money, total assets: 21354,74
+17.10.2016 19:48:49 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Brokers after trading in assets' ascending order: 
+17.10.2016 19:48:49 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 1 has 17 stocks of Facebook and 18024,40 money, total assets: 20230,92
+17.10.2016 19:48:49 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 3 has 12 stocks of Facebook and 18705,47 money, total assets: 20263,02
+17.10.2016 19:48:49 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 2 has 13 stocks of Epam and 19607,47 money, total assets: 20463,45
+17.10.2016 19:48:49 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 5 has 11 stocks of McDonalds and 19458,38 money, total assets: 20721,15
+17.10.2016 19:48:49 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 4 has 0 stocks and 21942,80 money, total assets: 21942,80

@@ -1,0 +1,27 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<Configuration status="INFO">
+    <Properties>
+        <property name = "pattern">
+            %d{dd.MM.yyyy HH:mm:ss} [%t] %-5level %logger{15} - %c{1} %m%n
+        </property>
+    </Properties>
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern = "${pattern}"/>
+        </Console>
+        <RollingFile name = "File" fileName = "logs/log.txt" append = "true"
+                     filePattern = "logs/$${dd.MM.yyyy}/log-%d{dd.MM.yyyy-HH}.txt">
+            <PatternLayout pattern = "${pattern}"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy />
+                <SizeBasedTriggeringPolicy size="20KB"/>
+            </Policies>
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <Root level="debug">
+            <AppenderRef ref="Console" level = "debug"/>
+            <AppenderRef ref="File" level = "debug"/>
+        </Root>
+    </Loggers>
+</Configuration>
