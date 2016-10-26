@@ -16,6 +16,4 @@ public class Const {
     public static final String NAME_BMW = "BMW";
     public static final String NAME_MCDONALDS = "McDonalds";
     public static final double BROKER_MONEY = 20000.;
-    public static final int SLEEP = 5;
-    public static final int STOCKS_FROM_START = 1000;
 }

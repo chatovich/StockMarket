@@ -4,6 +4,9 @@ import com.chatovich.stockmarket.action.Const;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import java.util.ArrayDeque;
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -16,15 +19,14 @@ public class Company {
 
     private String name;
     private double stockPrice;
-    boolean isStocksBought;
-    int stockQuantity;
-    ReentrantLock lock = new ReentrantLock();
+    private boolean areStocksBought;
+    private ArrayDeque <Broker> queue = new ArrayDeque<>();
+    private ReentrantLock lock = new ReentrantLock();
 
 
     public Company(String name, double stockPrice) {
         this.name = name;
         this.stockPrice = stockPrice;
-        this.stockQuantity = Const.STOCKS_FROM_START;
     }
 
     public double getStockPrice() {
@@ -44,52 +46,60 @@ public class Company {
     }
 
     public void buy (int stocks, Broker broker){
+
+        queue.add(broker);
+
+        lock.lock();
         try {
-            if (lock.tryLock(1, TimeUnit.MILLISECONDS)) {
+        while (queue.peek()!=null) {
+                Broker currentBroker = queue.poll();
                 double stocksPrice = stockPrice * stocks;
-                if (broker.getMoney() > stocksPrice) {
-                    broker.setMoney(broker.getMoney() - stocksPrice);
+            //check whether the broker has enough money to buy this amount of stocks
+                if (currentBroker.getMoney() > stocksPrice) {
+                    currentBroker.setMoney(currentBroker.getMoney() - stocksPrice);
                     //check whether the broker has already bought this company' stocks
-                    if (broker.getBrokerStocks().containsKey(this)) {
-                        int updatedStocks = broker.getBrokerStocks().get(this) + stocks;
-                        broker.getBrokerStocks().put(this, updatedStocks);
+                    if (currentBroker.getBrokerStocks().containsKey(this)) {
+                        int updatedStocks = currentBroker.getBrokerStocks().get(this) + stocks;
+                        currentBroker.getBrokerStocks().put(this, updatedStocks);
                     } else {
-                        broker.getBrokerStocks().put(this, stocks);
+                        currentBroker.getBrokerStocks().put(this, stocks);
                     }
-                    System.out.println(broker.getName() + " bought " + stocks + " stocks of " + name + ", spent " + stocksPrice);
-                    isStocksBought = true;
-                    double newPrice = updatePrice(isStocksBought, stocks);
+                    System.out.println(currentBroker.getName() + " bought " + stocks + " stocks of " + name + ", spent " + String.format("%.2f", stocksPrice));
+                    areStocksBought = true;
+                    double newPrice = updatePrice(areStocksBought, stocks);
                     this.setStockPrice(newPrice);
                 } else {
-                    System.out.println(broker.getName() + " doesn't have enough money to purchase " + stocks + " stocks of " + name);
+                    System.out.println(currentBroker.getName() + " doesn't have enough money to purchase " + stocks + " stocks of " + name);
                 }
-            }
-        } catch (InterruptedException e) {
-            LOGGER.log(Level.ERROR, e);
+        }
         } finally {
             lock.unlock();
         }
+
+//
     }
 
-    public void sell (int stocks, Broker broker){
-        try {
-            if (lock.tryLock(1,TimeUnit.MILLISECONDS)) {
-                double stocksPrice = stockPrice * stocks;
-                broker.setMoney(broker.getMoney() + stocksPrice);
-                broker.getBrokerStocks().remove(this);
-                System.out.println(broker.getName() + " sold " + stocks + " stocks of " + name + ", got " + stocksPrice);
-                isStocksBought = false;
-                this.setStockPrice(updatePrice(isStocksBought, stocks));
+    public void sell (int stocks, Broker broker, StockMarket stockMarket, Random random){
+            if (lock.tryLock()) {
+                try {
+                    double stocksPrice = stockPrice * stocks;
+                    broker.setMoney(broker.getMoney() + stocksPrice);
+                    int stocksLeft = broker.getBrokerStocks().get(this) - stocks;
+                    broker.getBrokerStocks().put(this,stocksLeft);
+                    System.out.println(broker.getName() + " sold " + stocks + " stocks of " + name + ", got " + String.format("%.2f", stocksPrice));
+                    areStocksBought = false;
+                    this.setStockPrice(updatePrice(areStocksBought, stocks));
+                } finally {
+                    lock.unlock();
+                }
+            } else {
+                System.out.println(broker.getName()+" didn't sell in time, decided to sell tomorrow..............");
             }
-        } catch (InterruptedException e) {
-            LOGGER.log(Level.ERROR, e);
-        } finally {
-            lock.unlock();
-        }
+
     }
 
     private double updatePrice(boolean isStocksBought, int stocks){
-        double delta = (double)stocks/stockQuantity*stockPrice;
+        double delta = (double)stocks/stockPrice;
         if (isStocksBought){
             return stockPrice + delta;
         } else {
