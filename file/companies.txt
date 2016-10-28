@@ -1,0 +1,6 @@
+Epam 65
+Apple 117
+Facebook 128
+McDonalds 114
+BMW 77
+Henkel 116

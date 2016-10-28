@@ -7,6 +7,7 @@ import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
@@ -14,22 +15,26 @@ import java.util.concurrent.locks.ReentrantLock;
  */
 public final class StockMarket {
 
-    static final Logger LOGGER = LogManager.getLogger(StockMarket.class);
-    private static StockMarket instance = null;
+    private static StockMarket instance;
     private static ReentrantLock lock = new ReentrantLock();
     private List<Company> companies = new ArrayList<>();
+    private static AtomicBoolean isNull = new AtomicBoolean(true);
 
     private StockMarket() {
     }
 
     public static StockMarket getInstance (){
-        lock.lock();
-        try{
-            if (instance==null){
-                instance = new StockMarket();
+
+        if (isNull.get()) {
+            lock.lock();
+            try{
+                if (instance==null){
+                    instance = new StockMarket();
+                    isNull.set(false);
+                }
+            } finally {
+                lock.unlock();
             }
-        } finally {
-            lock.unlock();
         }
         return instance;
     }
@@ -38,19 +43,15 @@ public final class StockMarket {
         return companies;
     }
 
-    public void addCompany (Company newCompany) {
+    public void addCompany (Company newCompany) throws WrongDataException {
         String newName = newCompany.getName();
         //check whether this company already exists
-        try {
             for (Company company : companies) {
                 if (company.getName().equalsIgnoreCase(newName)){
                     throw new WrongDataException("Company with name "+newName+" already operates on the StockMarket.");
                 }
             }
             companies.add(newCompany);
-        } catch (WrongDataException e) {
-            LOGGER.log(Level.ERROR, e);
-        }
     }
 
 

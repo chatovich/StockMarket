@@ -2,6 +2,7 @@ package com.chatovich.stockmarket.entity;
 
 import java.util.*;
 import java.util.concurrent.Callable;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
  * Created by Yultos_ on 16.10.2016
@@ -72,7 +73,7 @@ public class Broker implements Callable<Broker>{
                 brokerCompanies.add(entry.getKey());
             }
             Company company = brokerCompanies.get(random.nextInt(brokerStocks.size()));
-            company.sell(random.nextInt(brokerStocks.get(company)),this,stockMarket,random);
+            company.sell(random.nextInt(brokerStocks.get(company))+1,this,stockMarket,random);
         }
         return this;
     }
@@ -82,7 +83,7 @@ public class Broker implements Callable<Broker>{
         String s = "";
         double assets=money;
         for (Map.Entry<Company, Integer> entry : brokerStocks.entrySet()) {
-            s+=entry.getValue()+" stocks of "+entry.getKey().getName()+", ";
+            s+=entry.getValue()+" stocks of "+entry.getKey().getName()+", ("+name+")";
             assets+=entry.getKey().getStockPrice()*entry.getValue();
         }
         return name+" has "+ (brokerStocks.isEmpty()?"0 stocks":s) +String.format("%.2f",money)+" of money, total assets: " +

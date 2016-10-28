@@ -1,13 +1,10 @@
 package com.chatovich.stockmarket.entity;
 
-import com.chatovich.stockmarket.action.Const;
-import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayDeque;
 import java.util.Random;
-import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
@@ -64,7 +61,7 @@ public class Company {
                     } else {
                         currentBroker.getBrokerStocks().put(this, stocks);
                     }
-                    System.out.println(currentBroker.getName() + " bought " + stocks + " stocks of " + name + ", spent " + String.format("%.2f", stocksPrice));
+                    System.out.println(currentBroker.getName() + " bought " + stocks + " stocks of " + name + "("+currentBroker.getName()+"), spent " + String.format("%.2f", stocksPrice));
                     areStocksBought = true;
                     double newPrice = updatePrice(areStocksBought, stocks);
                     this.setStockPrice(newPrice);
@@ -105,5 +102,10 @@ public class Company {
         } else {
             return stockPrice - delta;
         }
+    }
+
+    @Override
+    public String toString() {
+        return this.name+" "+this.stockPrice;
     }
 }

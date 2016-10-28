@@ -1,10 +1,9 @@
 package com.chatovich.stockmarket.runner;
 
-import com.chatovich.stockmarket.action.Const;
 import com.chatovich.stockmarket.action.StockMarketAction;
 import com.chatovich.stockmarket.entity.Broker;
-import com.chatovich.stockmarket.entity.Company;
 import com.chatovich.stockmarket.entity.StockMarket;
+import com.chatovich.stockmarket.exception.WrongDataException;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -21,20 +20,22 @@ import java.util.concurrent.Future;
 public class StockRunner {
 
     static final Logger LOGGER = LogManager.getLogger(StockRunner.class);
+    static final String FILE_NAME = System.getProperty("user.dir")+"/file/companies.txt";
+    public static final double BROKER_MONEY = 20000.;
 
     public static void main(String[] args) {
 
         List <Future<Broker>> futureList = new ArrayList<>();
         StockMarket stockMarket = StockMarket.getInstance();
-        stockMarket.addCompany(new Company(Const.NAME_APPLE,Const.PRICE_APPLE));
-        stockMarket.addCompany(new Company(Const.NAME_FACEBOOK, Const.PRICE_FACEBOOK));
-        stockMarket.addCompany(new Company(Const.NAME_EPAM, Const.PRICE_EPAM));
-        stockMarket.addCompany(new Company(Const.NAME_BMW, Const.PRICE_BMW));
-        stockMarket.addCompany(new Company(Const.NAME_MCDONALDS, Const.PRICE_MCDONALDS));
-
+        //fill the stockmarket with companies
+        try {
+            StockMarketAction.fillStockMarket(stockMarket, FILE_NAME);
+        } catch (WrongDataException e) {
+            LOGGER.log(Level.ERROR, e);
+        }
         ExecutorService exec = Executors.newCachedThreadPool();
         for (int i = 0; i < 40; i++) {
-            futureList.add(exec.submit(new Broker("Broker " + (i + 1), Const.BROKER_MONEY, stockMarket)));
+            futureList.add(exec.submit(new Broker("Broker " + (i + 1), BROKER_MONEY, stockMarket)));
         }
         exec.shutdown();
         //extract brokers from <Broker> future
