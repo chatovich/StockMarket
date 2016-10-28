@@ -1,10 +1,8 @@
 package com.chatovich.stockmarket.entity;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import java.util.ArrayDeque;
 import java.util.Random;
+import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
@@ -12,11 +10,9 @@ import java.util.concurrent.locks.ReentrantLock;
  */
 public class Company {
 
-    static final Logger LOGGER = LogManager.getLogger(Company.class);
-
     private String name;
     private double stockPrice;
-    private boolean areStocksBought;
+    private AtomicBoolean areStocksBought = new AtomicBoolean(true);
     private ArrayDeque <Broker> queue = new ArrayDeque<>();
     private ReentrantLock lock = new ReentrantLock();
 
@@ -62,7 +58,7 @@ public class Company {
                         currentBroker.getBrokerStocks().put(this, stocks);
                     }
                     System.out.println(currentBroker.getName() + " bought " + stocks + " stocks of " + name + "("+currentBroker.getName()+"), spent " + String.format("%.2f", stocksPrice));
-                    areStocksBought = true;
+                    areStocksBought.set(true);
                     double newPrice = updatePrice(areStocksBought, stocks);
                     this.setStockPrice(newPrice);
                 } else {
@@ -84,7 +80,7 @@ public class Company {
                     int stocksLeft = broker.getBrokerStocks().get(this) - stocks;
                     broker.getBrokerStocks().put(this,stocksLeft);
                     System.out.println(broker.getName() + " sold " + stocks + " stocks of " + name + ", got " + String.format("%.2f", stocksPrice));
-                    areStocksBought = false;
+                    areStocksBought.set(false);
                     this.setStockPrice(updatePrice(areStocksBought, stocks));
                 } finally {
                     lock.unlock();
@@ -95,9 +91,9 @@ public class Company {
 
     }
 
-    private double updatePrice(boolean isStocksBought, int stocks){
+    private double updatePrice(AtomicBoolean areStocksBought, int stocks){
         double delta = (double)stocks/stockPrice;
-        if (isStocksBought){
+        if (areStocksBought.get()){
             return stockPrice + delta;
         } else {
             return stockPrice - delta;
