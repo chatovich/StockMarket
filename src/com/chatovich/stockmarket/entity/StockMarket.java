@@ -1,10 +1,6 @@
 package com.chatovich.stockmarket.entity;
 
 import com.chatovich.stockmarket.exception.WrongDataException;
-import org.apache.logging.log4j.Level;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;

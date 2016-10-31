@@ -71,9 +71,13 @@ public class StockMarketAction {
         for (String s : companiesList) {
             String [] arr = s.split(DELIMETER);
             if (arr.length==2){
-                String key = arr[0].trim();
-                Integer value = Integer.parseInt(arr[1].trim());
-                companies.put(key,value);
+                if (arr[0]!=null&&arr[1]!=null){
+                    String key = arr[0].trim();
+                    Integer value = Integer.parseInt(arr[1].trim());
+                    companies.put(key,value);
+                } else {
+                    LOGGER.log(Level.ERROR, "Wrong data in the file.");
+                }
             }
             else {
                 LOGGER.log(Level.ERROR, "Wrong data quantity in the file.");

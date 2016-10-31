@@ -1,25 +1,63 @@
-28.10.2016 11:42:37 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 10 has 18 stocks of Epam, (Broker 10)2 stocks of BMW, (Broker 10)18634,94 of money, total assets: 20135,07
-28.10.2016 11:42:37 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 9 has 90 stocks of Facebook, (Broker 9)8300,23 of money, total assets: 20144,77
-28.10.2016 11:42:37 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 22 has 18 stocks of BMW, (Broker 22)18628,63 of money, total assets: 20192,33
-28.10.2016 11:42:37 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 20 has 52 stocks of Apple, (Broker 20)13851,63 of money, total assets: 20227,05
-28.10.2016 11:42:37 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 32 has 10 stocks of Henkel, (Broker 32)156 stocks of BMW, (Broker 32)5528,49 of money, total assets: 20249,65
-28.10.2016 11:42:37 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 23 has 73 stocks of Epam, (Broker 23)14921,07 of money, total assets: 20300,28
-28.10.2016 11:42:37 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 8 has 52 stocks of McDonalds, (Broker 8)14053,84 of money, total assets: 20307,71
-28.10.2016 11:42:37 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 31 has 7 stocks of BMW, (Broker 31)19726,68 of money, total assets: 20334,78
-28.10.2016 11:42:37 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 26 has 73 stocks of McDonalds, (Broker 26)87 stocks of Apple, (Broker 26)908,36 of money, total assets: 20354,40
-28.10.2016 11:42:37 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 14 has 82 stocks of Facebook, (Broker 14)1 stocks of Henkel, (Broker 14)30 stocks of BMW, (Broker 14)6870,08 of money, total assets: 20384,86
-28.10.2016 11:42:37 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 12 has 29 stocks of Apple, (Broker 12)18 stocks of Facebook, (Broker 12)23 stocks of Epam, (Broker 12)12776,49 of money, total assets: 20395,74
-28.10.2016 11:42:37 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 37 has 79 stocks of Apple, (Broker 37)39 stocks of Epam, (Broker 37)7848,15 of money, total assets: 20407,70
-28.10.2016 11:42:37 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 3 has 51 stocks of McDonalds, (Broker 3)29 stocks of Apple, (Broker 3)10723,17 of money, total assets: 20412,30
-28.10.2016 11:42:37 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 30 has 73 stocks of McDonalds, (Broker 30)76 stocks of Epam, (Broker 30)6071,37 of money, total assets: 20451,13
-28.10.2016 11:42:37 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 25 has 34 stocks of Apple, (Broker 25)68 stocks of Facebook, (Broker 25)7363,59 of money, total assets: 20481,34
-28.10.2016 11:42:37 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 33 has 53 stocks of McDonalds, (Broker 33)37 stocks of BMW, (Broker 33)10924,75 of money, total assets: 20513,17
-28.10.2016 11:42:37 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 6 has 97 stocks of Apple, (Broker 6)28 stocks of Epam, (Broker 6)6608,41 of money, total assets: 20564,27
-28.10.2016 11:42:37 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 16 has 71 stocks of BMW, (Broker 16)14402,09 of money, total assets: 20570,04
-28.10.2016 11:42:37 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 2 has 9 stocks of Henkel, (Broker 2)71 stocks of Epam, (Broker 2)14310,17 of money, total assets: 20594,16
-28.10.2016 11:42:37 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 4 has 53 stocks of Apple, (Broker 4)54 stocks of Facebook, (Broker 4)23 stocks of BMW, (Broker 4)5036,06 of money, total assets: 20638,87
-28.10.2016 11:42:37 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 18 has 27 stocks of Facebook, (Broker 18)118 stocks of BMW, (Broker 18)6914,10 of money, total assets: 20718,41
-28.10.2016 11:42:37 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 27 has 31 stocks of Henkel, (Broker 27)80 stocks of Epam, (Broker 27)79 stocks of BMW, (Broker 27)4360,34 of money, total assets: 20742,37
-28.10.2016 11:42:37 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 38 has 91 stocks of McDonalds, (Broker 38)31 stocks of Apple, (Broker 38)47 stocks of Epam, (Broker 38)2540,02 of money, total assets: 20748,36
-28.10.2016 11:42:37 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 29 has 83 stocks of McDonalds, (Broker 29)45 stocks of BMW, (Broker 29)6884,21 of money, total assets: 20775,62
-28.10.2016 11:42:37 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 35 has 48 stocks of McDonalds, (Broker 35)120 stocks of BMW, (Broker 35)5243,12 of money, total assets: 21440,62
+31.10.2016 23:29:09 [main] ERROR com.chatovich.stockmarket.runner.StockRunner - StockRunner java.util.concurrent.ExecutionException: java.lang.NullPointerException
+java.lang.NullPointerException
+	at com.chatovich.stockmarket.entity.Broker.call(Broker.java:76) ~[stockmarket/:?]
+	at com.chatovich.stockmarket.entity.Broker.call(Broker.java:10) ~[stockmarket/:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[?:1.8.0_74]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) ~[?:1.8.0_74]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) ~[?:1.8.0_74]
+	at java.lang.Thread.run(Thread.java:745) ~[?:1.8.0_74]
+31.10.2016 23:29:09 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Brokers after trading in assets' ascending order: 
+31.10.2016 23:29:09 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 1 has 19 stocks of BMW, (Broker 1)76 stocks of Henkel, (Broker 1)46 stocks of Facebook, (Broker 1)3833,00 of money, total assets: 20777,49
+31.10.2016 23:30:31 [main] ERROR com.chatovich.stockmarket.runner.StockRunner - StockRunner java.util.concurrent.ExecutionException: java.lang.NullPointerException
+java.lang.NullPointerException
+	at com.chatovich.stockmarket.entity.Broker.call(Broker.java:76) ~[stockmarket/:?]
+	at com.chatovich.stockmarket.entity.Broker.call(Broker.java:10) ~[stockmarket/:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[?:1.8.0_74]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) ~[?:1.8.0_74]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) ~[?:1.8.0_74]
+	at java.lang.Thread.run(Thread.java:745) ~[?:1.8.0_74]
+31.10.2016 23:30:31 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Brokers after trading in assets' ascending order: 
+31.10.2016 23:30:31 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 3 has 57 stocks of Henkel, (Broker 3)4 stocks of BMW, (Broker 3)13009,38 of money, total assets: 20215,60
+31.10.2016 23:30:31 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 1 has 39 stocks of Apple, (Broker 1)15437,00 of money, total assets: 20220,17
+31.10.2016 23:30:31 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 2 has 17 stocks of Apple, (Broker 2)22 stocks of Apple, (Broker 2)39 stocks of Apple, (Broker 2)10831,86 of money, total assets: 20398,20
+31.10.2016 23:47:17 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Brokers after trading in assets' ascending order: 
+31.10.2016 23:47:17 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 26 has 54 stocks of Epam, (Broker 26)22 stocks of BMW, (Broker 26)14105,15 of money, total assets: 19986,09
+31.10.2016 23:47:17 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 32 has 13 stocks of McDonalds, (Broker 32)18502,80 of money, total assets: 20028,17
+31.10.2016 23:47:17 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 39 has 51 stocks of Epam, (Broker 39)36 stocks of BMW, (Broker 39)13217,43 of money, total assets: 20040,00
+31.10.2016 23:47:17 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 19 has 25 stocks of Facebook, (Broker 19)16756,13 of money, total assets: 20046,64
+31.10.2016 23:47:17 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 6 has 5 stocks of BMW, (Broker 6)19630,05 of money, total assets: 20046,66
+31.10.2016 23:47:17 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 29 has 32 stocks of McDonalds, (Broker 29)17 stocks of BMW, (Broker 29)14884,12 of money, total assets: 20055,35
+31.10.2016 23:47:17 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 4 has 9 stocks of BMW, (Broker 4)19305,68 of money, total assets: 20055,57
+31.10.2016 23:47:17 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 40 has 26 stocks of BMW, (Broker 40)75 stocks of Henkel, (Broker 40)8915,26 of money, total assets: 20057,49
+31.10.2016 23:47:17 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 5 has 52 stocks of Apple, (Broker 5)13892,89 of money, total assets: 20076,41
+31.10.2016 23:47:17 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 7 has 29 stocks of Facebook, (Broker 7)16264,99 of money, total assets: 20081,98
+31.10.2016 23:47:17 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 22 has 104 stocks of Facebook, (Broker 22)6397,15 of money, total assets: 20085,65
+31.10.2016 23:47:17 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 34 has 22 stocks of Facebook, (Broker 34)17196,61 of money, total assets: 20092,25
+31.10.2016 23:47:17 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 33 has 75 stocks of Henkel, (Broker 33)11118,90 of money, total assets: 20094,75
+31.10.2016 23:47:17 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 2 has 52 stocks of Apple, (Broker 2)13916,00 of money, total assets: 20099,52
+31.10.2016 23:47:17 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 20 has 51 stocks of Apple, (Broker 20)8 stocks of BMW, (Broker 20)12 stocks of Facebook, (Broker 20)11792,77 of money, total assets: 20103,39
+31.10.2016 23:47:17 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 30 has 39 stocks of McDonalds, (Broker 30)68 stocks of Epam, (Broker 30)10448,43 of money, total assets: 20121,85
+31.10.2016 23:47:17 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 28 has 14 stocks of Epam, (Broker 28)19077,17 of money, total assets: 20126,62
+31.10.2016 23:47:17 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 17 has 57 stocks of Facebook, (Broker 17)12629,11 of money, total assets: 20131,46
+31.10.2016 23:47:17 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 10 has 25 stocks of BMW, (Broker 10)18053,85 of money, total assets: 20136,90
+31.10.2016 23:47:17 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 24 has 9 stocks of Apple, (Broker 24)74 stocks of Facebook, (Broker 24)9333,05 of money, total assets: 20143,16
+31.10.2016 23:47:17 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 18 has 113 stocks of McDonalds, (Broker 18)6898,82 of money, total assets: 20157,84
+31.10.2016 23:47:17 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 13 has 33 stocks of BMW, (Broker 13)17411,70 of money, total assets: 20161,32
+31.10.2016 23:47:17 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 9 has 69 stocks of McDonalds, (Broker 9)12084,18 of money, total assets: 20180,40
+31.10.2016 23:47:17 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 16 has 9 stocks of BMW, (Broker 16)75 stocks of Henkel, (Broker 16)10458,69 of money, total assets: 20184,44
+31.10.2016 23:47:17 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 21 has 39 stocks of McDonalds, (Broker 21)51 stocks of Epam, (Broker 21)11787,02 of money, total assets: 20186,11
+31.10.2016 23:47:17 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 36 has 6 stocks of McDonalds, (Broker 36)58 stocks of BMW, (Broker 36)14649,70 of money, total assets: 20186,40
+31.10.2016 23:47:17 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 11 has 50 stocks of Apple, (Broker 11)3 stocks of BMW, (Broker 11)38 stocks of Facebook, (Broker 11)9002,34 of money, total assets: 20199,57
+31.10.2016 23:47:17 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 25 has 27 stocks of Epam, (Broker 25)18199,05 of money, total assets: 20222,98
+31.10.2016 23:47:17 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 12 has 28 stocks of Facebook, (Broker 12)75 stocks of Henkel, (Broker 12)7583,56 of money, total assets: 20244,78
+31.10.2016 23:47:17 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 14 has 80 stocks of Epam, (Broker 14)14247,97 of money, total assets: 20244,79
+31.10.2016 23:47:17 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 23 has 7 stocks of McDonalds, (Broker 23)1 stocks of Epam, (Broker 23)96 stocks of BMW, (Broker 23)11394,39 of money, total assets: 20289,61
+31.10.2016 23:47:17 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 15 has 45 stocks of Epam, (Broker 15)16938,34 of money, total assets: 20311,55
+31.10.2016 23:47:17 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 35 has 38 stocks of Epam, (Broker 35)17509,68 of money, total assets: 20358,17
+31.10.2016 23:47:17 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 27 has 22 stocks of McDonalds, (Broker 27)23 stocks of Epam, (Broker 27)16 stocks of Henkel, (Broker 27)14144,29 of money, total assets: 20364,63
+31.10.2016 23:47:17 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 31 has 46 stocks of Epam, (Broker 31)10 stocks of Facebook, (Broker 31)15656,70 of money, total assets: 20421,08
+31.10.2016 23:47:17 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 38 has 45 stocks of McDonalds, (Broker 38)29 stocks of BMW, (Broker 38)41 stocks of Henkel, (Broker 38)7891,97 of money, total assets: 20495,25
+31.10.2016 23:47:17 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 37 has 95 stocks of BMW, (Broker 37)75 stocks of Henkel, (Broker 37)3611,13 of money, total assets: 20502,57
+31.10.2016 23:47:17 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 8 has 51 stocks of Epam, (Broker 8)26 stocks of BMW, (Broker 8)14715,88 of money, total assets: 20705,23
+31.10.2016 23:47:17 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 1 has 61 stocks of Epam, (Broker 1)6 stocks of BMW, (Broker 1)69 stocks of Facebook, (Broker 1)6667,98 of money, total assets: 20822,28
+31.10.2016 23:47:17 [main] INFO  com.chatovich.stockmarket.runner.StockRunner - StockRunner Broker 3 has 11 stocks of Apple, (Broker 3)82 stocks of Epam, (Broker 3)13391,33 of money, total assets: 20846,12

@@ -1,7 +1,6 @@
 package com.chatovich.stockmarket.entity;
 
 import java.util.ArrayDeque;
-import java.util.Random;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -72,7 +71,7 @@ public class Company {
 //
     }
 
-    public void sell (int stocks, Broker broker, StockMarket stockMarket, Random random){
+    public void sell (int stocks, Broker broker){
             if (lock.tryLock()) {
                 try {
                     double stocksPrice = stockPrice * stocks;
@@ -104,4 +103,32 @@ public class Company {
     public String toString() {
         return this.name+" "+this.stockPrice;
     }
+
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((name == null) ? 0 : name.hashCode());
+        return result;
+    }
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Company other = (Company) obj;
+        if (name == null) {
+            if (other.name != null)
+                return false;
+        } else if (!name.equals(other.name))
+            return false;
+        if (stockPrice != other.stockPrice)
+            return false;
+        return true;
+    }
+
+
 }

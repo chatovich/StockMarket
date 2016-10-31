@@ -73,7 +73,7 @@ public class Broker implements Callable<Broker>{
                 brokerCompanies.add(entry.getKey());
             }
             Company company = brokerCompanies.get(random.nextInt(brokerStocks.size()));
-            company.sell(random.nextInt(brokerStocks.get(company))+1,this,stockMarket,random);
+            company.sell(random.nextInt(brokerStocks.get(company)),this);
         }
         return this;
     }
